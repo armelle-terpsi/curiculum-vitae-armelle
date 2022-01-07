@@ -1,0 +1,216 @@
+:root {
+  --color-tonic: 226, 1, 25;
+  --color-text: #708090;
+  --color-emphasis: #2F4F4F;
+  --color-header: #303030;
+}
+
+@page {
+  size: 21.0cm 29.7cm; /* Format A4 */
+  size:auto;
+  zoom:.7;
+}
+
+body {
+  font: normal 16px/1.5em Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+
+}
+
+/* header */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Cinzel Decorative', cursive;
+  color: var(--color-header);
+}
+
+/* html element */
+section{
+  display: flex;
+  justify-content: center;
+  box-shadow: 8px 8px 12px #aaa;
+  border-radius:1em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+
+smaller{
+  font-size: 0.8em;
+}
+
+article {
+  border-left: solid 0.25em rgba(var(--color-tonic), 0.8);
+  padding-left: 1em ;
+  margin-bottom: 2em;
+}
+
+article.no-border{
+  border-left: none;
+  padding-left: 0em ;
+  margin-left: 0.1em;
+}
+
+article.no-border:hover{
+  border-left: solid 0.1em rgba(var(--color-tonic), 1);
+  margin-left: 0em;
+}
+
+
+article:hover {
+  border-left: solid 0.25em rgba(var(--color-tonic), 1);
+}
+
+.text-vertical{
+  writing-mode: vertical-lr;
+}
+
+section.section__column{
+  flex-direction: column;
+  page-break-before: always;
+}
+
+.text-h1{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3em;
+  line-height: 0.75em;
+}
+
+.text-header{
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 6em;
+}
+
+.text-lg{
+  font-size: 1.2em;
+  line-height: 1.25em;
+}
+
+.text-tonic{
+  color: rgba(var(--color-tonic), 1);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 1em;
+}
+
+li::before{
+  color: rgba(var(--color-tonic), 1);
+  content:"\e049";
+  font-family: 'typicons';
+}
+
+.text-3x{
+  font-size: 3em;
+  line-height: 0.5em;
+}
+
+.text-center{
+  text-align: center;
+}
+
+/* definition des boites */
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center ;
+}
+
+.box.align-left{
+  justify-content: flex-start ;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* définition des marges */
+/* marge 2 espaces 8px */
+.m-2{
+  margin: 1em;
+}
+
+.m-top{
+  margin-top: 1em;
+}
+
+.m-right{
+  margin-right: 1em;
+}
+
+.m-top-lg{
+  margin-top: 2em;
+}
+
+.m-bottom-sm{
+  margin-bottom: 0.5em;
+}
+
+/* marge auto 2 espaces 8px */
+.ma-2 {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+/* definition des textes */
+
+/* text avec la font cinzel */
+.text-cinzel{
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+
+/* definition des styles d'image */
+.img-cv{
+  border-radius: 50%;
+  width: 12em;
+}
+
+
+/* bordure */
+
+.border-contact{
+  border-right: dashed thin #aaaaaa;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+
+/* link definition */
+
+a {
+  text-decoration: none;
+  color: rgba(var(--color-tonic), 0.8);
+}
+
+a:hover{
+  color: rgba(var(--color-tonic), 1);
+}
+
+a.btn {
+  color: #F5F5F5;
+  background: rgba(var(--color-tonic), 0.8);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+a.btn:hover {
+  color: white;
+  background: rgba(var(--color-tonic), 1);
+}
+
+/** impresion **/
+
+@media print {
+  section{
+    width: 90%;
+  }
+  a.btn{
+    display: none;
+  }
+}
