@@ -8,7 +8,7 @@
 @page {
   size: 21.0cm 29.7cm; /* Format A4 */
   size:auto;
-  zoom:.7;
+  zoom:.8;
 }
 
 body {
@@ -69,6 +69,9 @@ article:hover {
 
 section.section__column{
   flex-direction: column;
+}
+
+.page_break {
   page-break-before: always;
 }
 
@@ -208,8 +211,24 @@ a.btn:hover {
 /** impresion **/
 
 @media print {
+  body {
+    font: normal 22px/1.5em Arial, Helvetica, sans-serif;
+  }
+
+  .img-cv{
+    width: 10em;
+  }
+  .text-header{
+    font-size: 4em;
+  }
+
+  .text-h1{
+    font-size: 2.5em;
+  }
+
   section{
-    width: 90%;
+    width: 95%;
+
   }
   a.btn{
     display: none;
