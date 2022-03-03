@@ -41,6 +41,10 @@ smaller{
   font-size: 0.8em;
 }
 
+.hidden{
+  display: none;
+}
+
 article {
   border-left: solid 0.25em rgba(var(--color-tonic), 0.8);
   padding-left: 1em ;
@@ -212,18 +216,70 @@ a.btn:hover {
 
 @media print {
   body {
-    font: normal 22px/1.5em Arial, Helvetica, sans-serif;
+    font: normal 14px/1.5em Arial, Helvetica, sans-serif;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+    border-radius: 0em;
+    border: solid 1px gray;
+  }
+
+  article{
+    margin-bottom: 0.5em;
+    border-left: solid rgba(var(--color-tonic), 1) 1px;
+  }
+
+  article:hover{
+    border-left: solid rgba(var(--color-tonic), 1) 1px;
+  }
+
+  article p{
+    margin: 0em;
+    font-size: 80%;
+  }
+
+  #professional-experience ul{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  section#professional-experience {
+
+    padding-bottom: 1.5em;
   }
 
   .img-cv{
-    width: 10em;
+    width: 6em;
   }
   .text-header{
-    font-size: 4em;
+    font-size: 3em;
+  }
+
+  h3{
+    font-size: 1em;
+  }
+
+  .m-print-0 {
+    margin: 0em;
+  }
+
+  .text-print-normal{
+    font-size: 1em;
+  }
+
+  .text-3x{
+    font-size: 1.5em;
+  }
+
+  header .text-h1{
+    font-size: 1.3em;
   }
 
   .text-h1{
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   section{
@@ -231,6 +287,14 @@ a.btn:hover {
 
   }
   a.btn{
+    display: none;
+  }
+
+  .print-display-none{
+    display: none;
+  }
+
+  em{
     display: none;
   }
 }
