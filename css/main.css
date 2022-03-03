@@ -185,7 +185,8 @@ li::before{
 .border-contact{
   border-right: dashed thin #aaaaaa;
   margin-right: 1em;
-  padding-right: 1em;
+  padding-right: 3em;
+
 }
 
 
